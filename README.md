@@ -5,4 +5,4 @@ Look into individual folders for different types of examples.
 
 ## Setup
 
-Run `bundle install` to install necessary gem for the examples to work.
+Run `bundle install` to install necessary gems for the examples to work.
