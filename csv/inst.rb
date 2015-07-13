@@ -21,15 +21,19 @@ pre_build do
   puts "#{total_number_of_employees} entries has been generated."
 end
 
+# define data provider
 from CsvSource, 'data.csv'
 
+# tweak each row
 tweak do |row|
   # eliminate the retired ones
   row[:age].to_i < retirement_age ? row : nil
 end
 
+# define data consumer
 to ReportBuilder
 
+# after build hook
 post_build do
   puts 'Done.'
 end
