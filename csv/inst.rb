@@ -1,5 +1,6 @@
 require './utilities'
 require 'faker'
+require 'datacraft/tools'
 
 total_number_of_employees = 1000
 retirement_age = 60
@@ -22,7 +23,7 @@ pre_build do
 end
 
 # define data provider
-from CsvSource, 'data.csv'
+from Datacraft::Tools::CsvReader, 'data.csv'
 
 # tweak each row
 tweak do |row|
